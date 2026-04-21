@@ -1,10 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constelar la constelación - I Jornada de Jóvenes Investigadores</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            color: #333;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        .hero h2 {
+            font-size: 1.8em;
+            margin: 0;
+            font-weight: 300;
+            line-height: 1.4;
+            max-width: 800px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Hola mundo</h1>
-  <p>Mi primera web en GitHub</p>
+    <div class="hero">
+        <h1>Constelar la constelación</h1>
+        <h2>I jornada de jóvenes investigadores en teoría crítica</h2>
+    </div>
 </body>
 </html>
