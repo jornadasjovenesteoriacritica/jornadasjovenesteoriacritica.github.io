@@ -1,1 +1,200 @@
-<!DOCTYPE html>\n<html lang='en'>\n<head>\n    <meta charset='UTF-8'>\n    <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n    <title>Jornadas Jovenes Teoria Crítica</title>\n    <style>\n        body { background-color: #9B191C; color: white; font-family: Arial, sans-serif; }\n        header { padding: 20px; background: #B0B0B0; }\n        nav ul {list-style-type: none; padding: 0; }\n        nav ul li { display: inline; margin-right: 20px; }\n        nav a { color: white; text-decoration: none; }\n    </style>\n</head>\n<body>\n    <header>\n        <h1>Bienvenidos a las Jornadas Jóvenes de Teoría Crítica</h1>\n        <nav>\n            <ul>\n                <li><a href='#proyecto'>Proyecto</a></li>\n                <li><a href='#call-for-papers'>Call For Papers</a></li>\n                <li><a href='#inscription'>Inscription Form</a></li>\n            </ul>\n        </nav>\n    </header>\n    <section id='proyecto'>\n        <h2>Proyecto</h2>\n        <p>Descripción del proyecto aquí...</p>\n    </section>\n    <section id='call-for-papers'>\n        <h2>Call For Papers</h2>\n        <p>Detalles sobre la llamada para artículos aquí...</p>\n    </section>\n    <section id='inscription'>\n        <h2>Inscription Form</h2>\n        <form action='#' method='post'>\n            <label for='name'>Nombre:</label>\n            <input type='text' id='name' name='name'><br>\n            <label for='email'>Correo Electrónico:</label>\n            <input type='email' id='email' name='email'><br>\n            <input type='submit' value='Inscribirse'>\n        </form>\n    </section>\n</body>\n</html>\n
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constelaciones de un presente en llamas — I Jornada de Investigadores Jóvenes en Teoría Crítica</title>
+    <meta name="description" content="I Jornada de Investigadores Jóvenes en Teoría Crítica.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <p class="eyebrow">Call for Papers</p>
+                <h1 class="hero-title">Constelaciones<br>de un presente<br>en llamas</h1>
+                <p class="hero-subtitle">I Jornada de Investigadores Jóvenes en Teoría Crítica</p>
+                <p class="hero-meta"><span class="todo">[Fecha jornadas — TODO]</span></p>
+            </div>
+            <figure class="hero-flyer">
+                <button type="button" class="hero-flyer-trigger" aria-label="Ampliar cartel">
+                    <img src="assets/flyer.jpeg" alt="Flyer de las Jornadas: Constelaciones de un presente en llamas">
+                </button>
+            </figure>
+        </div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Secciones">
+        <div class="container tabs-inner">
+            <button role="tab" aria-selected="false" aria-controls="panel-proyecto" id="tab-proyecto" data-tab="proyecto">Proyecto</button>
+            <button role="tab" aria-selected="true"  aria-controls="panel-call"     id="tab-call"     data-tab="call">Call for Papers</button>
+            <button role="tab" aria-selected="false" aria-controls="panel-programa" id="tab-programa" data-tab="programa">Programa</button>
+            <button role="tab" aria-selected="false" aria-controls="panel-inscripcion" id="tab-inscripcion" data-tab="inscripcion">Inscripción</button>
+            <button role="tab" aria-selected="false" aria-controls="panel-contacto" id="tab-contacto" data-tab="contacto">Contacto</button>
+        </div>
+    </nav>
+
+    <main class="panels">
+        <section class="panel" id="panel-proyecto" role="tabpanel" aria-labelledby="tab-proyecto" hidden>
+            <div class="container narrow">
+                <h2 class="section-title">Proyecto</h2>
+                <p class="lead todo">
+                    [Descripción del proyecto — TODO. Breve presentación de las Jornadas, motivación,
+                    marco teórico y horizonte de discusión. 2–4 párrafos.]
+                </p>
+            </div>
+        </section>
+
+        <section class="panel" id="panel-call" role="tabpanel" aria-labelledby="tab-call">
+            <div class="container narrow">
+                <h2 class="section-title">Call for Papers</h2>
+                <p>
+                    Invitamos a investigadoras e investigadores jóvenes a enviar propuestas de
+                    comunicación en torno a los ejes de la Jornada.
+                </p>
+
+                <h3 class="sub">Ejes temáticos</h3>
+                <ul class="todo-list">
+                    <li class="todo">[Eje 1 — TODO]</li>
+                    <li class="todo">[Eje 2 — TODO]</li>
+                    <li class="todo">[Eje 3 — TODO]</li>
+                </ul>
+
+                <h3 class="sub">Envío de propuestas</h3>
+                <ul class="plain-list">
+                    <li><strong>Extensión del resumen:</strong> <span class="todo">[nº palabras — TODO]</span></li>
+                    <li><strong>Idioma:</strong> español</li>
+                    <li><strong>Correo de envío:</strong> <a href="mailto:jornadasteoriacritica@gmail.com">jornadasteoriacritica@gmail.com</a></li>
+                </ul>
+
+                <div class="deadline-card">
+                    <span class="deadline-label">Deadline</span>
+                    <span class="deadline-date todo">[Fecha límite — TODO]</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel" id="panel-programa" role="tabpanel" aria-labelledby="tab-programa" hidden>
+            <div class="container narrow">
+                <h2 class="section-title">Programa y sede</h2>
+                <ul class="plain-list">
+                    <li><strong>Fechas:</strong> <span class="todo">[Fecha jornadas — TODO]</span></li>
+                    <li><strong>Sede:</strong> <span class="todo">[Sede — TODO]</span></li>
+                </ul>
+                <p class="muted">El programa detallado se publicará una vez cerrada la selección de propuestas.</p>
+            </div>
+        </section>
+
+        <section class="panel" id="panel-inscripcion" role="tabpanel" aria-labelledby="tab-inscripcion" hidden>
+            <div class="container narrow center">
+                <h2 class="section-title">Inscripción</h2>
+                <p>La inscripción es gratuita. Para asistir, completa el formulario.</p>
+                <a class="btn btn-primary btn-large todo" href="#" target="_blank" rel="noopener">
+                    [Enlace al Google Form — TODO]
+                </a>
+            </div>
+        </section>
+
+        <section class="panel" id="panel-contacto" role="tabpanel" aria-labelledby="tab-contacto" hidden>
+            <div class="container narrow">
+                <h2 class="section-title">Contacto</h2>
+                <p>
+                    Para cualquier consulta:
+                    <a href="mailto:jornadasteoriacritica@gmail.com">jornadasteoriacritica@gmail.com</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div class="lightbox" id="flyer-lightbox" role="dialog" aria-modal="true" aria-label="Cartel ampliado" hidden>
+        <button type="button" class="lightbox-close" aria-label="Cerrar">×</button>
+        <img src="assets/flyer.jpeg" alt="Flyer de las Jornadas: Constelaciones de un presente en llamas">
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year">2026</span> · I Jornada de Investigadores Jóvenes en Teoría Crítica</p>
+            <p><a href="mailto:jornadasteoriacritica@gmail.com">jornadasteoriacritica@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const tabs = document.querySelectorAll('.tabs [role="tab"]');
+        const panels = document.querySelectorAll('.panel');
+        const defaultTab = 'call';
+
+        function activate(name, { scroll = false } = {}) {
+            tabs.forEach(t => {
+                const on = t.dataset.tab === name;
+                t.setAttribute('aria-selected', on ? 'true' : 'false');
+                t.classList.toggle('is-active', on);
+            });
+            panels.forEach(p => {
+                const on = p.id === 'panel-' + name;
+                p.hidden = !on;
+            });
+            if (history.replaceState) {
+                history.replaceState(null, '', '#' + name);
+            }
+            if (scroll) {
+                document.querySelector('.tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        tabs.forEach(t => t.addEventListener('click', () => activate(t.dataset.tab, { scroll: true })));
+
+        // Keyboard navigation (left/right arrows between tabs)
+        const tabList = document.querySelector('.tabs [role="tablist"], .tabs');
+        tabList.addEventListener('keydown', (e) => {
+            if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return;
+            const arr = Array.from(tabs);
+            const i = arr.findIndex(t => t.getAttribute('aria-selected') === 'true');
+            let next = i;
+            if (e.key === 'ArrowRight') next = (i + 1) % arr.length;
+            if (e.key === 'ArrowLeft')  next = (i - 1 + arr.length) % arr.length;
+            if (e.key === 'Home') next = 0;
+            if (e.key === 'End')  next = arr.length - 1;
+            arr[next].focus();
+            activate(arr[next].dataset.tab);
+            e.preventDefault();
+        });
+
+        const initial = (location.hash || '').replace('#', '');
+        const valid = Array.from(tabs).some(t => t.dataset.tab === initial);
+        activate(valid ? initial : defaultTab);
+
+        // Flyer lightbox
+        const lightbox = document.getElementById('flyer-lightbox');
+        const flyerTrigger = document.querySelector('.hero-flyer-trigger');
+        const lightboxClose = lightbox.querySelector('.lightbox-close');
+        let lastFocus = null;
+
+        function openLightbox() {
+            lastFocus = document.activeElement;
+            lightbox.hidden = false;
+            document.body.style.overflow = 'hidden';
+            lightboxClose.focus();
+        }
+        function closeLightbox() {
+            lightbox.hidden = true;
+            document.body.style.overflow = '';
+            if (lastFocus) lastFocus.focus();
+        }
+
+        flyerTrigger.addEventListener('click', openLightbox);
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+        });
+    </script>
+</body>
+</html>
