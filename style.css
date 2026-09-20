@@ -116,7 +116,7 @@ a:hover { color: var(--accent-hover); }
     max-width: 360px;
     justify-self: center;
 }
-.hero-flyer-trigger {
+.zoom-trigger {
     display: block;
     width: 100%;
     padding: 0;
@@ -126,18 +126,35 @@ a:hover { color: var(--accent-hover); }
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 6px 18px rgba(0, 0, 0, 0.3);
     transition: transform .25s ease, box-shadow .25s ease;
 }
-.hero-flyer-trigger:hover {
+.zoom-trigger:hover {
     transform: translateY(-3px);
     box-shadow: 0 26px 60px rgba(0, 0, 0, 0.55), 0 8px 22px rgba(0, 0, 0, 0.35);
 }
-.hero-flyer-trigger:focus-visible {
+.zoom-trigger:focus-visible {
     outline: 3px solid var(--accent);
     outline-offset: 4px;
 }
-.hero-flyer-trigger img {
+.zoom-trigger img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+/* ---------- Hojas del programa ---------- */
+.programa-sheets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    margin-top: 36px;
+}
+.programa-sheets figure { margin: 0; }
+.programa-sheets figcaption {
+    margin-top: 12px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
 /* ---------- Lightbox ---------- */
