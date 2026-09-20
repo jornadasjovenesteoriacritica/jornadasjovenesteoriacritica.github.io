@@ -21,7 +21,7 @@
                 <p class="hero-meta">13 y 14 de octubre de 2026 · Universidad Complutense de Madrid</p>
             </div>
             <figure class="hero-flyer">
-                <button type="button" class="hero-flyer-trigger" aria-label="Ampliar cartel">
+                <button type="button" class="zoom-trigger" aria-label="Ampliar cartel">
                     <img src="assets/cartell.jpeg" alt="Cartel de las Jornadas: Constelaciones de un presente en llamas">
                 </button>
             </figure>
@@ -163,7 +163,27 @@
                     <li><strong>Fechas:</strong> 13 y 14 de octubre de 2026</li>
                     <li><strong>Sede:</strong> Universidad Complutense de Madrid</li>
                 </ul>
-                <p class="muted">El programa detallado se publicará una vez cerrada la selección de propuestas.</p>
+
+                <p style="margin-top: 28px;">
+                    <a class="btn btn-primary btn-large" href="assets/programa.pdf" target="_blank" rel="noopener">
+                        Descargar programa (PDF)
+                    </a>
+                </p>
+
+                <div class="programa-sheets">
+                    <figure>
+                        <button type="button" class="zoom-trigger" aria-label="Ampliar programa del 13 de octubre">
+                            <img src="assets/programa0.jpeg" alt="Programa del 13 de octubre de 2026" loading="lazy">
+                        </button>
+                        <figcaption>13 de octubre</figcaption>
+                    </figure>
+                    <figure>
+                        <button type="button" class="zoom-trigger" aria-label="Ampliar programa del 14 de octubre">
+                            <img src="assets/programa1.jpeg" alt="Programa del 14 de octubre de 2026" loading="lazy">
+                        </button>
+                        <figcaption>14 de octubre</figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
 
@@ -247,9 +267,9 @@
         const valid = Array.from(tabs).some(t => t.dataset.tab === initial);
         activate(valid ? initial : defaultTab);
 
-        // Flyer lightbox
+        // Image lightbox (cartel + hojas del programa)
         const lightbox = document.getElementById('flyer-lightbox');
-        const flyerTrigger = document.querySelector('.hero-flyer-trigger');
+        const lightboxImg = lightbox.querySelector('img');
         const lightboxClose = lightbox.querySelector('.lightbox-close');
         let lastFocus = null;
 
@@ -265,13 +285,34 @@
             if (lastFocus) lastFocus.focus();
         }
 
-        flyerTrigger.addEventListener('click', openLightbox);
+        // Grupo navegable con flechas (las hojas del programa); el cartel va solo.
+        let group = [], groupIndex = 0;
+
+        function showInGroup(i) {
+            groupIndex = (i + group.length) % group.length;
+            const img = group[groupIndex].querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        }
+
+        document.querySelectorAll('.zoom-trigger').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const sheets = btn.closest('.programa-sheets');
+                group = sheets ? Array.from(sheets.querySelectorAll('.zoom-trigger')) : [btn];
+                showInGroup(group.indexOf(btn));
+                openLightbox();
+            });
+        });
         lightboxClose.addEventListener('click', closeLightbox);
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) closeLightbox();
         });
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+            if (lightbox.hidden) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (group.length < 2) return;
+            if (e.key === 'ArrowRight') showInGroup(groupIndex + 1);
+            if (e.key === 'ArrowLeft')  showInGroup(groupIndex - 1);
         });
     </script>
 </body>
